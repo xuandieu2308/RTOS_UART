@@ -1,0 +1,416 @@
+Command: E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\RTOS_UART\build\RTOS_UART.elf E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\RTOS_UART\build\bootloader\bootloader.elf --force-color -m 'E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'COM7'
+���A%�Speed   �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 22 2025 11:31:40[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09028h ( 36904) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=00019050 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (101) esp_image: segment 2: paddr=00019078 vaddr=3ffb0000 size=022a8h (  8872) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=0001b328 vaddr=40080000 size=04cf0h ( 19696) load[0m
+[0;32mI (121) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=12fbch ( 77756) map[0m
+[0;32mI (148) esp_image: segment 5: paddr=00032fe4 vaddr=40084cf0 size=09328h ( 37672) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     RTOS_UART[0m
+[0;32mI (192) app_init: App version:      v5.5-dirty[0m
+[0;32mI (197) app_init: Compile time:     Aug 22 2025 11:31:32[0m
+[0;32mI (202) app_init: ELF file SHA256:  889f99bc4...[0m
+[0;32mI (206) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (210) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (214) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (218) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (222) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (228) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (233) heap_init: At 3FFB2BC0 len 0002D440 (181 KiB): DRAM[0m
+[0;32mI (238) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (244) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (249) heap_init: At 4008E018 len 00011FE8 (71 KiB): IRAM[0m
+[0;33mW (255) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (265) spi_flash: detected chip: generic[0m
+[0;32mI (268) spi_flash: flash io: dio[0m
+[0;33mW (271) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (284) main_task: Started on CPU0[0m
+[0;32mI (294) main_task: Calling app_main()[0m
+[0;32mI (294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (294) main_task: Returned from app_main()[0m
+[0;32mI (1294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (1294) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (1794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (2294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (2694) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (3294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (3294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (4094) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (4294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (4794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (5294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (5494) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (6294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (6294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (6894) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (7294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (7794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (8294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (8294) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (9294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (9294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (9694) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (10294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (10794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (11094) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (11294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (12294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (12294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (12494) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (13294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (13794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (13894) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (14294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (15294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (15294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (15294) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (16294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (16694) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (16794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (17294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (18094) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (18294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (18294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (19294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (19494) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (19794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (20294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (20894) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (21294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (21294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (22294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (22294) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (22794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (23294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (23694) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (24294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (24294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (25094) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (25294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (25794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (26294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (26494) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (27294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (27294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (27894) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (28294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (28794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (29294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (29294) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (30294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (30294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (30694) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (31294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (31794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (32094) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (32294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (33294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (33294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (33494) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (34294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (34794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (34894) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (35294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (36294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (36294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (36294) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (37294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (37694) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (37794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (38294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (39094) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (39294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (39294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (40294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (40494) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (40794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (41294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (41894) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (42294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (42294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (43294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (43294) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (43794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (44294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (44694) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (45294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (45294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (46094) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (46294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (46794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (47294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (47494) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (48294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (48294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (48894) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (49294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (49794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (50294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (50294) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (51294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (51294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (51694) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (52294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (52794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (53094) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (53294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (54294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (54294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (54494) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (55294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (55794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (55894) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (56294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (57294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (57294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (57294) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (58294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (58694) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (58794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (59294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (60094) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (60294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (60294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (61294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (61494) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (61794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (62294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (62894) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (63294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (63294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (64294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (64294) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (64794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (65294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (65694) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (66294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (66294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (67094) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (67294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (67794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (68294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (68494) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (69294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (69294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (69894) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (70294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (70794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (71294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (71294) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (72294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (72294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (72694) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (73294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (73794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (74094) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (74294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (75294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (75294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (75494) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (76294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (76794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (76894) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (77294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (78294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (78294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (78294) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (79294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (79694) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (79794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (80294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (81094) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (81294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (81294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (82294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (82494) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (82794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (83294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (83894) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (84294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (84294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (85294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (85294) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (85794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (86294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (86694) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (87294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (87294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (88094) UART_RTOS: ESP1 did not receive data from ESP2![0m

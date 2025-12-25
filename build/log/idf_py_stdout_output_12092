@@ -1,0 +1,1150 @@
+Command: E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p COM10 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\RTOS_UART\build\RTOS_UART.elf E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\RTOS_UART\build\bootloader\bootloader.elf --force-color -m 'E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'COM10'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 22 2025 11:31:40[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=092b0h ( 37552) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=000192d8 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (101) esp_image: segment 2: paddr=00019300 vaddr=3ffb0000 size=022a8h (  8872) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=0001b5b0 vaddr=40080000 size=04a68h ( 19048) load[0m
+[0;32mI (121) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=16164h ( 90468) map[0m
+[0;32mI (152) esp_image: segment 5: paddr=0003618c vaddr=40084a68 size=096ech ( 38636) load[0m
+[0;32mI (174) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (174) boot: Disabling RNG early entropy source...[0m
+[0;32mI (184) cpu_start: Multicore app[0m
+[0;32mI (193) cpu_start: Pro cpu start user code[0m
+[0;32mI (193) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (193) app_init: Application information:[0m
+[0;32mI (193) app_init: Project name:     RTOS_UART[0m
+[0;32mI (197) app_init: App version:      v5.5-dirty[0m
+[0;32mI (201) app_init: Compile time:     Aug 22 2025 11:31:32[0m
+[0;32mI (206) app_init: ELF file SHA256:  fdfc8b4ba...[0m
+[0;32mI (210) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (215) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (218) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (222) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (227) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (233) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (238) heap_init: At 3FFB2B38 len 0002D4C8 (181 KiB): DRAM[0m
+[0;32mI (243) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (248) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (254) heap_init: At 4008E154 len 00011EAC (71 KiB): IRAM[0m
+[0;33mW (260) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (273) spi_flash: flash io: dio[0m
+[0;33mW (276) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (289) main_task: Started on CPU0[0m
+[0;32mI (299) main_task: Calling app_main()[0m
+[0;32mI (299) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=1[0m
+
+[0;32mI (299) main_task: Returned from app_main()[0m
+[0;32mI (939) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=1[0m
+
+[1;31mE (1399) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (1499) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=11[0m
+
+[0;32mI (1589) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=2[0m
+
+[0;32mI (2149) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=2[0m
+
+[0;32mI (2199) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=11[0m
+
+[0;32mI (2729) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=3[0m
+
+[0;32mI (2899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=12[0m
+
+[0;32mI (3269) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=3[0m
+
+[0;32mI (4029) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=4[0m
+
+[1;31mE (4099) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (4199) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=12[0m
+
+[0;32mI (4639) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=4[0m
+
+[0;32mI (4899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=13[0m
+
+[0;32mI (5219) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=5[0m
+
+[0;32mI (5599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=13[0m
+
+[0;32mI (6049) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=5[0m
+
+[0;32mI (6299) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=14[0m
+
+[0;32mI (6399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=14[0m
+
+[0;32mI (6849) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=6[0m
+
+[0;32mI (7099) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=15[0m
+
+[0;32mI (7369) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=6[0m
+
+[0;32mI (7799) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=15[0m
+
+[0;32mI (8159) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=7[0m
+
+[0;32mI (8709) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=7[0m
+
+[1;31mE (8999) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (9099) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=16[0m
+
+[0;32mI (9199) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=16[0m
+
+[0;32mI (9289) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=8[0m
+
+[0;32mI (9899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=17[0m
+
+[0;32mI (10019) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=8[0m
+
+[0;32mI (10829) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=9[0m
+
+[1;31mE (11099) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (11199) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=17[0m
+
+[0;32mI (11579) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=9[0m
+
+[0;32mI (11899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=18[0m
+
+[0;32mI (12189) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=10[0m
+
+[0;32mI (12599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=18[0m
+
+[0;32mI (13079) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=10[0m
+
+[0;32mI (13299) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=19[0m
+
+[0;32mI (13749) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=11[0m
+
+[0;32mI (13999) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=19[0m
+
+[0;32mI (14259) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=11[0m
+
+[0;32mI (14699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=20[0m
+
+[0;32mI (14849) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=12[0m
+
+[0;32mI (15399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=20[0m
+
+[0;32mI (15589) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=12[0m
+
+[0;32mI (16449) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=13[0m
+
+[1;31mE (16599) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (16699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=21[0m
+
+[0;32mI (17229) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=13[0m
+
+[0;32mI (17399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=21[0m
+
+[0;32mI (17899) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=14[0m
+
+[0;32mI (18099) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=22[0m
+
+[0;32mI (18669) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=14[0m
+
+[0;32mI (18799) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=22[0m
+
+[0;32mI (18899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=23[0m
+
+[0;32mI (19189) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=15[0m
+
+[0;32mI (19599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=23[0m
+
+[0;32mI (20019) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=15[0m
+
+[0;32mI (20299) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=24[0m
+
+[0;32mI (20659) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=16[0m
+
+[0;32mI (20999) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=24[0m
+
+[0;32mI (21409) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=16[0m
+
+[0;32mI (21699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=25[0m
+
+[0;32mI (22239) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=17[0m
+
+[0;32mI (22399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=25[0m
+
+[0;32mI (23029) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=17[0m
+
+[1;31mE (23599) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (23699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=26[0m
+
+[0;32mI (23799) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=26[0m
+
+[0;32mI (23879) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=18[0m
+
+[0;32mI (24769) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=18[0m
+
+[1;31mE (24999) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (25099) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=27[0m
+
+[0;32mI (25199) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=27[0m
+
+[0;32mI (25289) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=19[0m
+
+[0;32mI (25899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=28[0m
+
+[0;32mI (25929) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=19[0m
+
+[0;32mI (26599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=28[0m
+
+[0;32mI (26629) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=20[0m
+
+[0;32mI (26699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=29[0m
+
+[0;32mI (27409) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=20[0m
+
+[1;31mE (27899) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (27999) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=29[0m
+
+[0;32mI (28139) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=21[0m
+
+[0;32mI (28699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=30[0m
+
+[0;32mI (28819) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=21[0m
+
+[0;32mI (29389) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=22[0m
+
+[0;32mI (29399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=30[0m
+
+[0;32mI (29909) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=22[0m
+
+[0;32mI (30099) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=31[0m
+
+[0;32mI (30199) UART_RTOS: UART PRINT: Đã nhận được: �
+[0;32mI (30519) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=23[0m
+
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 22 2025 11:31:40[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=092b0h ( 37552) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=000192d8 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (101) esp_image: segment 2: paddr=00019300 vaddr=3ffb0000 size=022a8h (  8872) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=0001b5b0 vaddr=40080000 size=04a68h ( 19048) load[0m
+[0;32mI (121) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=16164h ( 90468) map[0m
+[0;32mI (152) esp_image: segment 5: paddr=0003618c vaddr=40084a68 size=096ech ( 38636) load[0m
+[0;32mI (174) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (174) boot: Disabling RNG early entropy source...[0m
+[0;32mI (184) cpu_start: Multicore app[0m
+[0;32mI (193) cpu_start: Pro cpu start user code[0m
+[0;32mI (193) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (193) app_init: Application information:[0m
+[0;32mI (193) app_init: Project name:     RTOS_UART[0m
+[0;32mI (197) app_init: App version:      v5.5-dirty[0m
+[0;32mI (201) app_init: Compile time:     Aug 22 2025 11:31:32[0m
+[0;32mI (206) app_init: ELF file SHA256:  fdfc8b4ba...[0m
+[0;32mI (210) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (215) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (218) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (222) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (227) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (233) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (238) heap_init: At 3FFB2B38 len 0002D4C8 (181 KiB): DRAM[0m
+[0;32mI (243) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (248) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (254) heap_init: At 4008E154 len 00011EAC (71 KiB): IRAM[0m
+[0;33mW (260) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (273) spi_flash: flash io: dio[0m
+[0;33mW (276) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (289) main_task: Started on CPU0[0m
+[0;32mI (299) main_task: Calling app_main()[0m
+[0;32mI (299) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=1[0m
+
+[0;32mI (299) main_task: Returned from app_main()[0m
+[0;32mI (829) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=1[0m
+
+[0;32mI (899) UART_RTOS: UART PRINT: Đã nhận được: �֫����)�[0m
+[0;32mI (1379) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=2[0m
+
+[0;32mI (1599) UART_RTOS: UART PRINT: Đã nhận được: [0m
+[0;32mI (1879) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=2[0m
+
+[0;32mI (2299) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=1[0m
+
+[0;32mI (2479) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=3[0m
+
+[0;32mI (2999) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=2[0m
+
+[0;32mI (3059) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=3[0m
+
+[0;32mI (3699) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=2[0m
+
+[0;32mI (3929) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=4[0m
+
+[0;32mI (4399) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=3[0m
+
+[0;32mI (4499) UART_RTOS: UART PRINT: Đã nhận được: [0m
+[0;32mI (4669) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=4[0m
+
+[0;32mI (5169) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=5[0m
+
+[0;32mI (5199) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=3[0m
+
+[0;32mI (5899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=4[0m
+
+[0;32mI (5979) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=5[0m
+
+[0;32mI (6599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=4[0m
+
+[0;32mI (6789) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=6[0m
+
+[0;32mI (7299) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=5[0m
+
+[0;32mI (7619) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=6[0m
+
+[0;32mI (8259) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=7[0m
+
+[1;31mE (8499) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (8599) UART_RTOS: UART PRINT: Đã nhận được: [0m
+[0;32mI (8699) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=1[0m
+
+[0;32mI (8839) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=7[0m
+
+[0;32mI (9379) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=8[0m
+
+[1;31mE (9899) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (9999) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=2[0m
+
+[0;32mI (10129) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=8[0m
+
+[0;32mI (10699) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=2[0m
+
+[0;32mI (10749) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=9[0m
+
+[0;32mI (11349) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=9[0m
+
+[0;32mI (11399) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=3[0m
+
+[0;32mI (12099) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=3[0m
+
+[0;32mI (12129) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=10[0m
+
+[0;32mI (12799) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=4[0m
+
+[0;32mI (12909) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=10[0m
+
+[0;32mI (13499) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=4[0m
+
+[0;32mI (13619) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=11[0m
+
+[0;32mI (14199) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=5[0m
+
+[0;32mI (14389) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=11[0m
+
+[0;32mI (14899) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=5[0m
+
+[0;32mI (14989) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=12[0m
+
+[0;32mI (15599) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=6[0m
+
+[0;32mI (15679) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=12[0m
+
+[0;32mI (16299) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=6[0m
+
+[0;32mI (16449) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=13[0m
+
+[0;32mI (16999) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=7[0m
+
+[0;32mI (17309) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=13[0m
+
+[0;32mI (17699) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=7[0m
+
+[0;32mI (17889) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=14[0m
+
+[0;32mI (18399) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=8[0m
+
+[0;32mI (18729) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=14[0m
+
+[0;32mI (19099) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=8[0m
+
+[0;32mI (19379) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=15[0m
+
+[0;32mI (19799) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=9[0m
+
+[0;32mI (20139) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=15[0m
+
+[0;32mI (20499) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=9[0m
+
+[0;32mI (20839) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=16[0m
+
+[0;32mI (21379) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=16[0m
+
+[1;31mE (21699) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (21799) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=10[0m
+
+[0;32mI (21899) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=10[0m
+
+[0;32mI (22109) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=17[0m
+
+[0;32mI (22759) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=17[0m
+
+[1;31mE (23099) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (23289) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=18[0m
+
+[0;32mI (23809) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=18[0m
+
+[1;31mE (24299) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (24599) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=19[0m
+
+[0;32mI (25289) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=19[0m
+
+[1;31mE (25499) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (25919) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=20[0m
+
+[1;31mE (26699) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (26759) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=20[0m
+
+[0;32mI (26799) UART_RTOS: UART PRINT: Đã nhận được: [0m
+[0;32mI (27629) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=21[0m
+
+[1;31mE (27999) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (28139) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=21[0m
+
+[0;32mI (28859) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=22[0m
+
+[1;31mE (29199) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (29559) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=22[0m
+
+[0;32mI (30269) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=23[0m
+
+[1;31mE (30399) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (30499) UART_RTOS: UART PRINT: Đã nhận được: [0m
+[0;32mI (30939) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=23[0m
+
+[0;32mI (31549) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=24[0m
+
+[1;31mE (31699) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (32189) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=24[0m
+
+[0;32mI (32709) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=25[0m
+
+[1;31mE (32899) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (33369) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=25[0m
+
+[1;31mE (34099) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (34229) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=26[0m
+
+[0;32mI (34799) UART_RTOS: UART PRINT: Đã nhận được: [0m
+[0;32mI (34929) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=26[0m
+
+[0;32mI (35729) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=27[0m
+
+[1;31mE (35999) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (36569) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=27[0m
+
+[1;31mE (37199) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (37239) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=28[0m
+
+[0;32mI (37829) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=28[0m
+
+[1;31mE (38399) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (38659) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=29[0m
+
+[0;32mI (39099) UART_RTOS: UART PRINT: Đã nhận được: [0m
+[0;32mI (39499) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=29[0m
+
+[0;32mI (40079) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=30[0m
+
+[1;31mE (40299) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (40669) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=30[0m
+
+[0;32mI (41249) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=31[0m
+
+[1;31mE (41499) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (42079) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=31[0m
+
+[0;32mI (42199) UART_RTOS: UART PRINT: Đã nhận được: : Dieu From Tqsk 1 | count=29[0m
+
+[0;32mI (42609) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=32[0m
+
+[0;32mI (43289) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=32[0m
+
+[1;31mE (43399) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (43849) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=33[0m
+
+[0;32mI (44479) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=33[0m
+
+[1;31mE (44599) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (45049) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=34[0m
+
+[0;32mI (45299) UART_RTOS: UART PRINT: Đã nhận được: [0m
+[0;32mI (45669) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=34[0m
+
+[0;32mI (46479) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=35[0m
+
+[1;31mE (46499) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (47209) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=35[0m
+
+[1;31mE (47699) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (47799) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=36[0m
+
+[0;32mI (47799) UART_RTOS: UART PRINT: Đã nhận được: 34[0m
+�
+[0;32mI (48429) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=36[0m
+
+[0;32mI (48499) UART_RTOS: UART PRINT: Đã nhận được: [0m
+[0;32mI (49199) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=37[0m
+
+[0;32mI (49199) UART_RTOS: UART PRINT: Đã nhận được: [0m
+[0;32mI (49899) UART_RTOS: UART PRINT: Đã nhận được: [0m
+[0;32mI (50089) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=37[0m
+
+[0;32mI (50599) UART_RTOS: UART PRINT: Đã nhận được: [0m
+[0;32mI (50699) UART_RTOS: UART PRINT: Đã nhận được: [0m
+[0;32mI (50709) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=38[0m
+
+[0;32mI (51289) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=38[0m
+
+[0;32mI (51399) UART_RTOS: UART PRINT: Đã nhận được: [0m
+[0;32mI (51879) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=39[0m
+
+[1;31mE (52599) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (52629) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=39[0m
+
+[0;32mI (53299) UART_RTOS: UART PRINT: Đã nhận được: �[0m
+[0;32mI (53349) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=40[0m
+
+[0;32mI (54049) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=40[0m
+
+[1;31mE (54499) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (54629) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=41[0m
+
+[0;32mI (55449) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=41[0m
+
+[1;31mE (55699) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (55969) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=42[0m
+
+[0;32mI (56779) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=42[0m
+
+[1;31mE (56899) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (56999) UART_RTOS: UART PRINT: Đã nhận được: [0m
+[0;32mI (57449) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=43[0m
+
+[0;32mI (58019) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=43[0m
+
+[1;31mE (58199) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (58719) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=44[0m
+
+[1;31mE (59399) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (59419) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=44[0m
+
+[0;32mI (60059) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=45[0m
+
+[0;32mI (60099) UART_RTOS: UART PRINT: Đã nhận được: [0m
+[0;32mI (60629) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=45[0m
+
+[0;32mI (60799) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=1[0m
+
+[0;32mI (60899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=2[0m
+
+[0;32mI (61289) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=46[0m
+
+[0;32mI (61599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=2[0m
+
+[0;32mI (61849) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=46[0m
+
+[0;32mI (62299) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=3[0m
+
+[0;32mI (62529) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=47[0m
+
+[0;32mI (62999) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=3[0m
+
+[0;32mI (63339) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=47[0m
+
+[0;32mI (63699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=4[0m
+
+[0;32mI (64139) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=48[0m
+
+[0;32mI (64399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=4[0m
+
+[0;32mI (64639) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=48[0m
+
+[0;32mI (65099) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=5[0m
+
+[0;32mI (65429) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=49[0m
+
+[0;32mI (65799) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=5[0m
+
+[0;32mI (66319) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=49[0m
+
+[0;32mI (66499) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=6[0m
+
+[0;32mI (67129) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=50[0m
+
+[0;32mI (67199) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=6[0m
+
+[0;32mI (67899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=7[0m
+
+[0;32mI (67989) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=50[0m
+
+[0;32mI (68599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=7[0m
+
+[0;32mI (68619) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=51[0m
+
+[0;32mI (69429) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=51[0m
+
+[1;31mE (69799) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (69899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=8[0m
+
+[0;32mI (69949) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=52[0m
+
+[0;32mI (70599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=8[0m
+
+[0;32mI (70699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=9[0m
+
+[0;32mI (70839) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=52[0m
+
+[0;32mI (71369) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=53[0m
+
+[1;31mE (71899) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (71979) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=53[0m
+
+[0;32mI (72849) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=54[0m
+
+[1;31mE (73099) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (73699) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=54[0m
+
+[1;31mE (74299) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (74419) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=55[0m
+
+[0;32mI (75309) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=55[0m
+
+[1;31mE (75499) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (75599) UART_RTOS: UART PRINT: Đã nhận được: [0m
+[0;32mI (76049) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=56[0m
+
+[1;31mE (76799) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (76839) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=56[0m
+
+[0;32mI (76899) UART_RTOS: UART PRINT: Đã nhận được: �?[0m
+[0;32mI (77469) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=57[0m
+
+[0;32mI (77599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=1[0m
+
+[0;32mI (78129) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=57[0m
+
+[0;32mI (78299) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=2[0m
+
+[0;32mI (78969) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=58[0m
+
+[0;32mI (78999) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=2[0m
+
+[0;32mI (79599) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=58[0m
+
+[0;32mI (79699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=3[0m
+
+[0;32mI (80159) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=59[0m
+
+[0;32mI (80399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=3[0m
+
+[0;32mI (80499) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=4[0m
+
+[0;32mI (80759) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=59[0m
+
+[0;32mI (81469) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=60[0m
+
+[1;31mE (81699) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (81799) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=4[0m
+
+[0;32mI (81899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=5[0m
+
+[0;32mI (81969) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=60[0m
+
+[0;32mI (82599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=5[0m
+
+[0;32mI (82639) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=61[0m
+
+[0;32mI (83359) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=61[0m
+
+[1;31mE (83799) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (83899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=6[0m
+
+[0;32mI (84219) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=62[0m
+
+[0;32mI (84599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=6[0m
+
+[0;32mI (84699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=7[0m
+
+[0;32mI (84789) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=62[0m
+
+[0;32mI (85479) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=63[0m
+
+[1;31mE (85899) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (85999) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=7[0m
+
+[0;32mI (86099) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=8[0m
+
+[0;32mI (86259) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=63[0m
+
+[0;32mI (86799) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=8[0m
+
+[0;32mI (87059) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=64[0m
+
+[0;32mI (87499) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=9[0m
+
+[0;32mI (87599) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=64[0m
+
+[0;32mI (88109) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=65[0m
+
+[0;32mI (88199) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=9[0m
+
+[0;32mI (88689) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=65[0m
+
+[0;32mI (88899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=10[0m
+
+[0;32mI (89439) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=66[0m
+
+[0;32mI (89599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=10[0m
+
+[0;32mI (90299) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=11[0m
+
+[0;32mI (90299) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=66[0m
+
+[0;32mI (90999) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=11[0m
+
+[0;32mI (91159) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=67[0m
+
+[0;32mI (91699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=12[0m
+
+[0;32mI (91909) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=67[0m
+
+[0;32mI (92399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=12[0m
+
+[0;32mI (92799) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=68[0m
+
+[0;32mI (93099) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=13[0m
+
+[0;32mI (93599) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=68[0m
+
+[0;32mI (93799) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=13[0m
+
+[0;32mI (94129) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=69[0m
+
+[0;32mI (94499) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=14[0m
+
+[0;32mI (94829) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=69[0m
+
+[0;32mI (95199) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=14[0m
+
+[0;32mI (95539) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=70[0m
+
+[0;32mI (95899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=15[0m
+
+[0;32mI (96429) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=70[0m
+
+[0;32mI (96599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=15[0m
+
+[0;32mI (96699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=16[0m
+
+[0;32mI (97219) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=71[0m
+
+[0;32mI (97399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=16[0m
+
+[0;32mI (97779) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=71[0m
+
+[0;32mI (98099) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=17[0m
+
+[0;32mI (98349) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=72[0m
+
+[0;32mI (98799) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=17[0m
+
+[0;32mI (98859) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=72[0m
+
+[0;32mI (99499) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=18[0m
+
+[0;32mI (99509) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=73[0m
+
+[0;32mI (100199) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=18[0m
+
+[0;32mI (100289) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=73[0m
+
+[0;32mI (100899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=19[0m
+
+[0;32mI (100999) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=74[0m
+
+[0;32mI (101599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=19[0m
+
+[0;32mI (101609) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=74[0m
+
+[0;32mI (101699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=20[0m
+
+[0;32mI (102399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=20[0m
+
+[0;32mI (102499) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=75[0m
+
+[0;32mI (103309) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=75[0m
+
+[1;31mE (103599) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (103699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=21[0m
+
+[0;32mI (104139) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=76[0m
+
+[0;32mI (104399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=21[0m
+
+[0;32mI (104689) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=76[0m
+
+[0;32mI (105099) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=22[0m
+
+[0;32mI (105199) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=22[0m
+
+[0;32mI (105509) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=77[0m
+
+[0;32mI (105899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=23[0m
+
+[0;32mI (106369) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=77[0m
+
+[0;32mI (107039) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=78[0m
+
+[1;31mE (107099) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (107199) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=23[0m
+
+[0;32mI (107819) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=78[0m
+
+[0;32mI (107899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=24[0m
+
+[0;32mI (108539) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=79[0m
+
+[0;32mI (108599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=24[0m
+
+[0;32mI (109119) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=79[0m
+
+[0;32mI (109299) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=25[0m
+
+[0;32mI (109759) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=80[0m
+
+[0;32mI (109999) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=25[0m
+
+[0;32mI (110629) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=80[0m
+
+[0;32mI (110699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=26[0m
+
+[0;32mI (111399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=26[0m
+
+[0;32mI (111519) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=81[0m
+
+[0;32mI (112099) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=27[0m
+
+[0;32mI (112409) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=81[0m
+
+[0;32mI (112799) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=27[0m
+
+[0;32mI (113179) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=82[0m
+
+[0;32mI (113499) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=28[0m
+
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 22 2025 11:31:40[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=092b0h ( 37552) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=000192d8 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (101) esp_image: segment 2: paddr=00019300 vaddr=3ffb0000 size=022a8h (  8872) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=0001b5b0 vaddr=40080000 size=04a68h ( 19048) load[0m
+[0;32mI (121) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=16164h ( 90468) map[0m
+[0;32mI (152) esp_image: segment 5: paddr=0003618c vaddr=40084a68 size=096ech ( 38636) load[0m
+[0;32mI (174) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (174) boot: Disabling RNG early entropy source...[0m
+[0;32mI (184) cpu_start: Multicore app[0m
+[0;32mI (193) cpu_start: Pro cpu start user code[0m
+[0;32mI (193) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (193) app_init: Application information:[0m
+[0;32mI (193) app_init: Project name:     RTOS_UART[0m
+[0;32mI (197) app_init: App version:      v5.5-dirty[0m
+[0;32mI (201) app_init: Compile time:     Aug 22 2025 11:31:32[0m
+[0;32mI (206) app_init: ELF file SHA256:  fdfc8b4ba...[0m
+[0;32mI (210) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (215) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (218) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (222) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (227) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (233) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (238) heap_init: At 3FFB2B38 len 0002D4C8 (181 KiB): DRAM[0m
+[0;32mI (243) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (248) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (254) heap_init: At 4008E154 len 00011EAC (71 KiB): IRAM[0m
+[0;33mW (260) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (273) spi_flash: flash io: dio[0m
+[0;33mW (276) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (289) main_task: Started on CPU0[0m
+[0;32mI (299) main_task: Calling app_main()[0m
+[0;32mI (299) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=1[0m
+
+[0;32mI (299) main_task: Returned from app_main()[0m
+[0;32mI (839) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=1[0m
+
+[0;32mI (899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=29[0m
+
+[0;32mI (1599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=29[0m
+
+[0;32mI (1679) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=2[0m
+
+[0;32mI (2299) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=30[0m
+
+[0;32mI (2439) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=2[0m
+
+[0;32mI (2979) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=3[0m
+
+[0;32mI (2999) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=30[0m
+
+[0;32mI (3549) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=3[0m
+
+[0;32mI (3699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=31[0m
+
+[0;32mI (4059) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=4[0m
+
+[0;32mI (4399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=31[0m
+
+[0;32mI (4709) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=4[0m
+
+[0;32mI (5099) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=32[0m
+
+[0;32mI (5199) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=32[0m
+
+[0;32mI (5219) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=5[0m
+
+[0;32mI (5899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=33[0m
+
+[0;32mI (5919) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=5[0m
+
+[0;32mI (6599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=33[0m
+
+[0;32mI (6649) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=6[0m
+
+[0;32mI (7199) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=6[0m
+
+[0;32mI (7299) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=34[0m
+
+[0;32mI (7819) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=7[0m
+
+[0;32mI (7999) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=34[0m
+
+[0;32mI (8639) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=7[0m
+
+[0;32mI (8699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=35[0m
+
+[0;32mI (9399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=35[0m
+
+[0;32mI (9529) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=8[0m
+
+[0;32mI (10079) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=8[0m
+
+[1;31mE (10599) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (10699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=36[0m
+
+[0;32mI (10779) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=9[0m
+
+[0;32mI (11309) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=9[0m
+
+[0;32mI (11399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=36[0m
+
+[0;32mI (11829) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=10[0m
+
+[0;32mI (12099) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=37[0m
+
+[0;32mI (12479) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=10[0m
+
+[0;32mI (12799) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=37[0m
+
+[0;32mI (13339) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=11[0m
+
+[1;31mE (13999) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (14099) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=38[0m
+
+[0;32mI (14169) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=11[0m
+
+[0;32mI (14199) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=38[0m
+
+[0;32mI (14899) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=12[0m
+
+[0;32mI (14899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=39[0m
+
+[0;32mI (15599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=39[0m
+
+[0;32mI (15779) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=12[0m
+
+[0;32mI (16299) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=40[0m
+
+[0;32mI (16599) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=13[0m
+
+[0;32mI (16999) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=40[0m
+
+[0;32mI (17099) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=13[0m
+
+[0;32mI (17699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=41[0m
+
+[0;32mI (17989) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=14[0m
+
+[0;32mI (18399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=41[0m
+
+[0;32mI (18869) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=14[0m
+
+[0;32mI (19099) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=42[0m
+
+[0;32mI (19759) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=15[0m
+
+[0;32mI (19799) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=42[0m
+
+[0;32mI (20589) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=15[0m
+
+[1;31mE (20999) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (21099) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=43[0m
+
+[0;32mI (21309) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=16[0m
+
+[0;32mI (21799) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=43[0m
+
+[0;32mI (21999) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=16[0m
+
+[0;32mI (22499) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=44[0m
+
+[0;32mI (22829) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=17[0m
+
+[0;32mI (23199) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=44[0m
+
+[0;32mI (23399) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=17[0m
+
+[0;32mI (23899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=45[0m
+
+[0;32mI (24109) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=18[0m
+
+[0;32mI (24599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=45[0m
+
+[0;32mI (24919) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=18[0m
+
+[0;32mI (25299) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=46[0m
+
+[0;32mI (25769) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=19[0m
+
+[0;32mI (25999) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=46[0m
+
+[0;32mI (26549) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=19[0m
+
+[0;32mI (26699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=47[0m
+
+[0;32mI (27399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=47[0m
+
+[0;32mI (27409) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=20[0m
+
+[0;32mI (27499) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=48[0m
+
+[0;32mI (28199) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=48[0m
+
+[0;32mI (28279) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=20[0m
+
+[0;32mI (28899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=49[0m
+
+[0;32mI (28989) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=21[0m
+
+[0;32mI (29549) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=21[0m
+
+[1;31mE (30099) UART_RTOS: UART PRINT: Không nhận được dữ liệu mới![0m
+[0;32mI (30199) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=49[0m
+
+[0;32mI (30339) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=22[0m
+
+[0;32mI (30899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=50[0m
+
+[0;32mI (30939) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=22[0m
+
+[0;32mI (31599) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=50[0m
+
+[0;32mI (31709) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=23[0m
+
+[0;32mI (32299) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=51[0m
+
+[0;32mI (32559) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=23[0m
+
+[0;32mI (32999) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=51[0m
+
+[0;32mI (33229) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=24[0m
+
+[0;32mI (33699) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=52[0m
+
+[0;32mI (33909) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=24[0m
+
+[0;32mI (34399) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=52[0m
+
+[0;32mI (34449) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=25[0m
+
+[0;32mI (34959) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=25[0m
+
+[0;32mI (35099) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=53[0m
+
+[0;32mI (35759) UART_RTOS: Task1 Sent: TX1: Dieu From Task 1 | count=26[0m
+
+[0;32mI (35799) UART_RTOS: UART PRINT: Đã nhận được: TX2: Dieu From Task 2 | count=53[0m
+
+[0;32mI (35899) UART_RTOS: UART PRINT: Đã nhận được: TX1: Dieu From Task 1 | count=54[0m
+
+[0;32mI (36419) UART_RTOS: Task2 Sent: TX2: Dieu From Task 2 | count=26[0m
+
+[0;32mI (36599) UART_RTOS: UART PRINT

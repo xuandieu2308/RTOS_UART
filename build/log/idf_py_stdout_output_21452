@@ -1,0 +1,624 @@
+Command: E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools/idf_monitor.py -p COM7 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\RTOS_UART\build\RTOS_UART.elf E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\examples\get-started\RTOS_UART\build\bootloader\bootloader.elf --force-color -m 'E:\ESP32_NEWBIE\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'E:\ESP32_NEWBIE\Espressif\frameworks\esp-idf-v5.5\tools\idf.py' '-p' 'COM7'
+���2: SPI Speed    �ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6380
+ho 0 tail 12 room 4
+load:0x40078000,len:15916
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (29) boot: ESP-IDF v5.5-dirty 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Aug 22 2025 11:31:40[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.0[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (45) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (52) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (65) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09028h ( 36904) map[0m
+[0;32mI (101) esp_image: segment 1: paddr=00019050 vaddr=3ff80000 size=00020h (    32) load[0m
+[0;32mI (101) esp_image: segment 2: paddr=00019078 vaddr=3ffb0000 size=022a8h (  8872) load[0m
+[0;32mI (109) esp_image: segment 3: paddr=0001b328 vaddr=40080000 size=04cf0h ( 19696) load[0m
+[0;32mI (121) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=12fbch ( 77756) map[0m
+[0;32mI (148) esp_image: segment 5: paddr=00032fe4 vaddr=40084cf0 size=09328h ( 37672) load[0m
+[0;32mI (169) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (169) boot: Disabling RNG early entropy source...[0m
+[0;32mI (180) cpu_start: Multicore app[0m
+[0;32mI (188) cpu_start: Pro cpu start user code[0m
+[0;32mI (188) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (188) app_init: Application information:[0m
+[0;32mI (188) app_init: Project name:     RTOS_UART[0m
+[0;32mI (192) app_init: App version:      v5.5-dirty[0m
+[0;32mI (197) app_init: Compile time:     Aug 22 2025 11:31:32[0m
+[0;32mI (202) app_init: ELF file SHA256:  889f99bc4...[0m
+[0;32mI (206) app_init: ESP-IDF:          v5.5-dirty[0m
+[0;32mI (210) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (214) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (218) efuse_init: Chip rev:         v3.0[0m
+[0;32mI (222) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (228) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (233) heap_init: At 3FFB2BC0 len 0002D440 (181 KiB): DRAM[0m
+[0;32mI (238) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (244) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (249) heap_init: At 4008E018 len 00011FE8 (71 KiB): IRAM[0m
+[0;33mW (255) spi_flash: boya detected but related driver is not linked, please check option `SPI_FLASH_SUPPORT_BOYA_CHIP`[0m
+[0;32mI (265) spi_flash: detected chip: generic[0m
+[0;32mI (268) spi_flash: flash io: dio[0m
+[0;33mW (271) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (284) main_task: Started on CPU0[0m
+[0;32mI (294) main_task: Calling app_main()[0m
+[0;32mI (294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (294) main_task: Returned from app_main()[0m
+[1;31mE (404) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (804) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (1204) UART_RTOS: ESP1 received unexpected data: ~[0m
+[0;32mI (1294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (1604) UART_RTOS: ESP1 received unexpected data: (cnt = 58)[0m
+[0;32mI (1794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (2004) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (2294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (2404) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (2804) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (3204) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (3294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (3294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (3604) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (4004) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (4294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (4404) UART_RTOS: ESP1 received unexpected data: �
+[0;32mI (4794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (4804) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (5204) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (5294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (5604) UART_RTOS: ESP1 received unexpected data: 8<<[0m
+[1;31mE (6004) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (6294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (6294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (6404) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (6804) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (7204) UART_RTOS: ESP1 received unexpected data: @ ��[0m
+[0;32mI (7294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (7604) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (7794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (8004) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (8294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (8404) UART_RTOS: ESP1 received unexpected data: [0m��
+[1;31mE (8804) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (9204) UART_RTOS: ESP1 received unexpected data: 3�
+[0;32mI (9294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (9294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (9604) UART_RTOS: ESP1 received unexpected data: ��[0m
+[1;31mE (10004) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (10294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (10404) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (10794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (10804) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (11204) UART_RTOS: ESP1 received unexpected data:  (cnt = �
+[0;32mI (11294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (11604) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (12004) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (12294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (12294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (12404) UART_RTOS: ESP1 received unexpected data: ���[0m
+[1;31mE (12804) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (13204) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (13294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (13604) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (13794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (14004) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (14294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (14404) UART_RTOS: ESP1 received unexpected data:  ����[0m
+[1;31mE (14804) UART_RTOS: ESP1 received unexpected data: ��[0m
+[1;31mE (15204) UART_RTOS: ESP1 received unexpected data: ��[0m
+[0;32mI (15294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (15294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (15604) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (16004) UART_RTOS: ESP1 received unexpected data:  �������[0m
+[0;32mI (16294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (16404) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (16794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (16804) UART_RTOS: ESP1 received unexpected data: �
+[1;31mE (17204) UART_RTOS: ESP1 received unexpected data: 8[0m
+[0;32mI (17294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (17604) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (18034) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (18294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (18294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (18564) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (18964) UART_RTOS: ESP1 received unexpected data:   �
+[0;32mI (19294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (19364) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (19764) UART_RTOS: ESP1 received unexpected data: ��2 of Bach (,����[0m
+[0;32mI (19794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (20164) UART_RTOS: ESP1 received unexpected data: ��[0m
+[0;32mI (20294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (20564) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (20964) UART_RTOS: ESP1 received unexpected data: �
+[0;32mI (21294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (21294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (21384) UART_RTOS: ESP1 received unexpected data: �
+[1;31mE (21784) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (22184) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (22294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (22584) UART_RTOS: ESP1 received unexpected data: 69)[0m
+[0;32mI (22794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (23024) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (23294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (23444) UART_RTOS: ESP1 received unexpected data: �
+[1;31mE (23984) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (24294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (24294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (24384) UART_RTOS: ESP1 received unexpected data: �
+[1;31mE (24784) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 70)[0m
+[1;31mE (25184) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 70)[0m
+I (25294) UART_RTOS: Task1 Sent: TX1: Hello from Task1!
+
+[0;32mI (25794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (26294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (26554) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 71)[0m
+[1;31mE (27044) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 71)[0m
+[0;32mI (27294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (27294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (28244) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 72)[0m
+[0;32mI (28294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (28794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (28884) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 72)[0m
+[0;32mI (29294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (29894) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 73)[0m
+[0;32mI (30294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (30294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (30534) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 73)[0m
+[0;32mI (31294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (31734) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 74)[0m
+[0;32mI (31794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (32294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (32534) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 74)[0m
+[1;31mE (33004) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (33294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (33294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (34294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (34404) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (34794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (35044) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (35294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (36294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (36294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (36444) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[1;31mE (36854) UART_RTOS: ESP1 received unexpected data: �
+[0;32mI (37294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (37794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (38254) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (38294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (38654) UART_RTOS: ESP1 received unexpected data: Task1![0m
+[0;32mI (39294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (39294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (40054) UART_RTOS: ESP1 did not receive data from ESP2![0m
+[0;32mI (40294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (40454) UART_RTOS: ESP1 received unexpected data: [0m
+[0;32mI (40794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (41294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (41354) UART_RTOS: ESP1 received unexpected data: [0m
+[1;31mE (42154) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 1)[0m
+[0;32mI (42294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (42294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (43154) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 2)[0m
+[0;32mI (43294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (43754) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 2)[0m
+[0;32mI (43794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (44294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (45154) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 3)[0m
+[0;32mI (45294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (45294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (45954) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 3)[0m
+[0;32mI (46294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (46794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (47234) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 4)[0m
+[0;32mI (47294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (47914) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 4)[0m
+[0;32mI (48294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (48294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (49294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (49314) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 5)[0m
+[0;32mI (49794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (49984) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 5)[0m
+[0;32mI (50294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (51184) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 6)[0m
+[0;32mI (51294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (51294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (52004) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 6)[0m
+[0;32mI (52294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (52794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (53294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (53404) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 7)[0m
+[1;31mE (54004) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 7)[0m
+[0;32mI (54294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (54294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (55014) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 8)[0m
+[0;32mI (55294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (55794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (55814) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 8)[0m
+[0;32mI (56294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (57014) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 9)[0m
+[0;32mI (57294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (57294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (57614) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 9)[0m
+[0;32mI (58294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (58644) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 10)[0m
+[0;32mI (58794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (59294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (59444) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 10)[0m
+[0;32mI (60294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (60294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (60844) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 11)[0m
+[0;32mI (61294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (61674) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 11)[0m
+[0;32mI (61794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (62294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (63074) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 12)[0m
+[0;32mI (63294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (63294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (63564) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 12)[0m
+[0;32mI (64294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (64764) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 13)[0m
+[0;32mI (64794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (65294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (65444) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 13)[0m
+[0;32mI (66294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (66294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (66844) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 14)[0m
+[0;32mI (67294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (67644) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 14)[0m
+[0;32mI (67794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (68294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (68844) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 15)[0m
+[0;32mI (69294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (69294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (69464) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 15)[0m
+[0;32mI (70294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (70684) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 16)[0m
+[0;32mI (70794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (71294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (71514) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 16)[0m
+[0;32mI (72294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (72294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (72714) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 17)[0m
+[0;32mI (73294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (73314) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 17)[0m
+[0;32mI (73794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (74294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (74714) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 18)[0m
+[0;32mI (75294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (75294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (75514) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 18)[0m
+[0;32mI (76294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (76794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (76914) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 19)[0m
+[0;32mI (77294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (77514) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 19)[0m
+[0;32mI (78294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (78294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (78764) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 20)[0m
+[0;32mI (79294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (79624) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 20)[0m
+[0;32mI (79794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (80294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (80894) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 21)[0m
+[0;32mI (81294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (81294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (81694) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 21)[0m
+[0;32mI (82294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (82724) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 22)[0m
+[0;32mI (82794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (83294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (83574) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 22)[0m
+[0;32mI (84294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (84294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (84774) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 23)[0m
+[0;32mI (85294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (85464) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 23)[0m
+[0;32mI (85794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (86294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (86524) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 24)[0m
+[1;31mE (87144) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 24)[0m
+[0;32mI (87294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (87294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (88294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (88434) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 25)[0m
+[0;32mI (88794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (89264) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 25)[0m
+[0;32mI (89294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (90294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (90294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (90664) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 26)[0m
+[0;32mI (91294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (91344) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 26)[0m
+[0;32mI (91794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (92294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (92414) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 27)[0m
+[1;31mE (93014) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 27)[0m
+[0;32mI (93294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (93294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (94294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (94414) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 28)[0m
+[0;32mI (94794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (95014) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 28)[0m
+[0;32mI (95294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (96294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (96294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (96414) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 29)[0m
+[1;31mE (96834) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 29)[0m
+[0;32mI (97294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (97794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (98234) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 30)[0m
+[0;32mI (98294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (99034) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 30)[0m
+[0;32mI (99294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (99294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (100034) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 31)[0m
+[0;32mI (100294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (100674) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 31)[0m
+[0;32mI (100794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (101294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (101874) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 32)[0m
+[0;32mI (102294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (102294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (102674) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 32)[0m
+[0;32mI (103294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (103794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (103934) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 33)[0m
+[0;32mI (104294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (104734) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 33)[0m
+[0;32mI (105294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (105294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (106134) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 34)[0m
+[0;32mI (106294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (106784) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 34)[0m
+[0;32mI (106794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (107294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (107794) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 35)[0m
+[0;32mI (108294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (108294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (108484) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 35)[0m
+[0;32mI (109294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (109794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (109884) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 36)[0m
+[0;32mI (110294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (110684) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 36)[0m
+[0;32mI (111294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (111294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (111884) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 37)[0m
+[0;32mI (112294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (112484) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 37)[0m
+[0;32mI (112794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (113294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (113544) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 38)[0m
+[0;32mI (114294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (114294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (114364) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 38)[0m
+[0;32mI (115294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (115624) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 39)[0m
+[0;32mI (115794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (116224) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 39)[0m
+[0;32mI (116294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (117294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (117294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[1;31mE (117504) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 40)[0m
+[1;31mE (118104) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 40)[0m
+[0;32mI (118294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (118794) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
+[0;32mI (119294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[1;31mE (119304) UART_RTOS: ESP1 received unexpected data: Task 1 of Bach (cnt = 41)[0m
+[1;31mE (120164) UART_RTOS: ESP1 received unexpected data: Task 2 of Bach (cnt = 41)[0m
+[0;32mI (120294) UART_RTOS: Task1 Sent: TX1: Hello from Task1![0m
+
+[0;32mI (120294) UART_RTOS: Task2 Sent: TX2: Hello from Task2![0m
+
